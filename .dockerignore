@@ -1,0 +1,10 @@
+node_modules
+dist
+.venv
+data
+.git
+.env
+__pycache__
+*.pyc
+backups
+graphify-out

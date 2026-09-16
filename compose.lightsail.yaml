@@ -1,0 +1,31 @@
+services:
+  app:
+    # The base loopback-only port remains available for SSH-tunneled diagnosis.
+    # Public requests reach the app exclusively through Caddy on 80/443.
+    restart: unless-stopped
+  proxy:
+    image: caddy:2.9.1-alpine
+    restart: unless-stopped
+    environment:
+      APP_DOMAIN: ${APP_DOMAIN:?Set APP_DOMAIN in .env to your public domain}
+      ACME_EMAIL: ${ACME_EMAIL:?Set ACME_EMAIL in .env for certificate notices}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      app:
+        condition: service_healthy
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  caddy-data:
+  caddy-config:

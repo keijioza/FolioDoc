@@ -1,0 +1,47 @@
+{
+  "name": "folio-documents",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "@tiptap/core": "2.11.5",
+    "@tiptap/react": "2.11.5",
+    "@tiptap/pm": "2.11.5",
+    "@tiptap/starter-kit": "2.11.5",
+    "@tiptap/extension-underline": "2.11.5"
+  },
+  "overrides": {
+    "@tiptap/core": "$@tiptap/core",
+    "@tiptap/pm": "$@tiptap/pm",
+    "@tiptap/extension-blockquote": "2.11.5",
+    "@tiptap/extension-bold": "2.11.5",
+    "@tiptap/extension-bubble-menu": "2.11.5",
+    "@tiptap/extension-bullet-list": "2.11.5",
+    "@tiptap/extension-code": "2.11.5",
+    "@tiptap/extension-code-block": "2.11.5",
+    "@tiptap/extension-document": "2.11.5",
+    "@tiptap/extension-dropcursor": "2.11.5",
+    "@tiptap/extension-floating-menu": "2.11.5",
+    "@tiptap/extension-gapcursor": "2.11.5",
+    "@tiptap/extension-hard-break": "2.11.5",
+    "@tiptap/extension-heading": "2.11.5",
+    "@tiptap/extension-history": "2.11.5",
+    "@tiptap/extension-horizontal-rule": "2.11.5",
+    "@tiptap/extension-italic": "2.11.5",
+    "@tiptap/extension-list-item": "2.11.5",
+    "@tiptap/extension-ordered-list": "2.11.5",
+    "@tiptap/extension-paragraph": "2.11.5",
+    "@tiptap/extension-strike": "2.11.5",
+    "@tiptap/extension-text": "2.11.5"
+  },
+  "devDependencies": {
+    "vite": "6.1.0"
+  }
+}
